@@ -47,7 +47,10 @@
 # #4
 # def uppercase(func):
 #     def make_upper(name):
-#        return func(name).upper()
+#         if isinstance(name, str) == True:
+#             return func(name).upper()
+#         else:
+#             return "not string!!!"
 #     return make_upper
 
 # @uppercase
@@ -57,19 +60,19 @@
 # print(begain("shay"))    
 
 #5
-def count_calls(func):
-    counter = 0
-    def wraper():
-        nonlocal counter
-        func()
-        counter +=1
-        print(counter)
-    return wraper
+# def count_calls(func):
+#     counter = 0
+#     def wraper():
+#         nonlocal counter
+#         func()
+#         counter +=1
+#         print(counter)
+#     return wraper
 
-@count_calls
-def starting():
-    print("starting counter!!!")
+# @count_calls
+# def starting():
+#     print("starting counter!!!")
     
-starting()
-starting()
-starting() 
+# starting()
+# starting()
+# starting() 
