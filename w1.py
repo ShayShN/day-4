@@ -30,19 +30,19 @@
 
 # runs()
     
-# #3
-# def logging_arguments(func):
-#     def print_arguments(*args):
-#         print(*args)
-#         func(*args)
-#         print("end!")
-#     return print_arguments
+#3
+def logging_arguments(func):
+    def print_arguments(*args):
+        print(*args)
+        func()
+        print("end!")
+    return print_arguments
 
-# @logging_arguments
-# def starting():
-#     print(["shay","shay","nechmad","nechmad"])
+@logging_arguments
+def starting(*args):
+    print("0k")
 
-# starting()
+starting("shay","shay","nechmad","nechmad")
         
 # #4
 # def uppercase(func):
